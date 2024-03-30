@@ -1,0 +1,33 @@
+{
+  "name": "glightbox-plugin-template",
+  "version": "1.0.0",
+  "description": "GLightbox plugin",
+  "main": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "watch": "vite build --watch",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "demo": "node ./demo/server.js",
+    "update:deps": "npm-check-updates -u && npm i"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "GPLV3",
+  "devDependencies": {
+    "@types/node": "^20.12.2",
+    "glightbox": "^4.0.0-beta.5",
+    "npm-check-updates": "^16.14.18",
+    "typescript": "^5.4.3",
+    "vite": "^5.2.7",
+    "vite-plugin-dts": "^3.8.1"
+  },
+  "dependencies": {
+    "@glightbox/plugin-core": "^1.0.0-beta.3"
+  }
+}

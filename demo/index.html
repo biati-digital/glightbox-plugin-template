@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>GLightbox | Plugin demo</title>
+        <link rel="stylesheet" href="/node_modules/glightbox/dist/glightbox.css" />
+        <style>
+            .container {
+                display: grid;
+                place-items: center;
+                width: 100vw;
+                height: 100vh;
+            }
+
+            button {
+                background: rgba(249, 249, 249, 1);
+                border: 2px solid #ebebeb;
+                padding: 1rem 3.1rem;
+                border-radius: 5px;
+                font-size: 1.1rem;
+                font-weight: 500;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <button type="button" id="test" data-glightbox data-url="/file.mp3">Open lightbox</button>
+        </div>
+    </body>
+
+    <script type="module">
+        import { GLightbox } from '/node_modules/glightbox/dist/index.es.js';
+        import { MyPlugin } from '/dist/index.es.js';
+
+        const glightbox = new GLightbox({
+            plugins: [
+                new MyPlugin({
+                    text: 'my plugin text',
+                    color: '#d2d2d2'
+                }),
+            ],
+        });
+    </script>
+
+</html>
